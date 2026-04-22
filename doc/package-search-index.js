@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"co.edu.uptc.products.domain"},{"l":"co.edu.uptc.products.ui"}];updateSearchResults();

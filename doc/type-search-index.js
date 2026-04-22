@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"co.edu.uptc.products.ui","l":"Main"},{"p":"co.edu.uptc.products.domain","l":"Product"}];updateSearchResults();
