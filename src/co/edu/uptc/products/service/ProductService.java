@@ -1,5 +1,6 @@
 package co.edu.uptc.products.service;
 
+import java.util.Objects;
 import java.util.Set;
 
 import co.edu.uptc.products.domain.Product;
@@ -40,7 +41,12 @@ public class ProductService {
 	
 	public boolean updateProduct(Product product) {
 		if(this.validate(product)) {
-			return this.productRepository.updateProduct(product);
+			/* Identificamos el objeto anterior */
+			Product oldProduct = this.productRepository.findProductById(product.getId());
+			if(!Objects.isNull(oldProduct)) {
+				return this.productRepository.updateProduct(product);
+			}
+			return true;
 		}
 		return false;
 	}
