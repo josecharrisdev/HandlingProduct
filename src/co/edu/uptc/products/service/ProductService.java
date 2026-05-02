@@ -46,7 +46,7 @@ public class ProductService {
 			if(!Objects.isNull(oldProduct)) {
 				return this.productRepository.updateProduct(product);
 			}
-			return true;
+			return false;
 		}
 		return false;
 	}
