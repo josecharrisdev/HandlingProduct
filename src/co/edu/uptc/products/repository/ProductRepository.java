@@ -27,12 +27,11 @@ public class ProductRepository {
 				.findFirst().orElse(null);
 	}
 	
-	public boolean updateProduct(Product newProduct) {
+	public void updateProduct(Product newProduct) {
 		/* Eliminamos el registro actual */
 		this.products.remove(newProduct);
 		/* Se agrega el nuevo producto */
 		this.products.add(newProduct);
-		return true;
 	}
 	
 	public boolean delete(Long idProduct) {
