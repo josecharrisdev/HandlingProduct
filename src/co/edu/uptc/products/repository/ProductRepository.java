@@ -6,7 +6,6 @@ import java.util.Set;
 import co.edu.uptc.products.domain.Product;
 
 public class ProductRepository {
-	
 	private Set<Product> products;
 	
 	public ProductRepository() {
@@ -18,7 +17,7 @@ public class ProductRepository {
 	}
 	
 	public Set<Product> findAll(){
-		return this.products;
+		return new HashSet<>(products);
 	}
 	
 	public Product findProductById(Long idProduct) {

@@ -36,6 +36,9 @@ public class ProductService {
 	}
 	
 	public Product findProductById(Long idProduct) {
+		if(Objects.isNull(idProduct)) {
+			return null;
+		}
 		return this.productRepository.findProductById(idProduct);
 	}
 	
@@ -53,6 +56,9 @@ public class ProductService {
 	}
 	
 	public boolean deleteProduct(Long idProduct) {
+		if(Objects.isNull(idProduct)) {
+			return false;
+		}
 		return this.productRepository.delete(idProduct);
 	}
 	
