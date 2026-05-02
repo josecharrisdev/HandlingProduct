@@ -44,7 +44,8 @@ public class ProductService {
 			/* Identificamos el objeto anterior */
 			Product oldProduct = this.productRepository.findProductById(product.getId());
 			if(!Objects.isNull(oldProduct)) {
-				return this.productRepository.updateProduct(product);
+				this.productRepository.updateProduct(product);
+				return true;
 			}
 			return false;
 		}
